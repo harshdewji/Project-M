@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import './Portfolio.css';
+import '../Portfolio.css';
 
 // Asset paths
 const kitchenImg = '/assets/modern_kitchen_homelane_style_1777577519367.png';

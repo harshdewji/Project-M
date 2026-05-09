@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Plus, Trash2, LogOut, Layout, MessageSquare, Users, Inbox } from 'lucide-react';
-import './Admin.css';
+import '../Admin.css';
 
 const AdminPage = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);

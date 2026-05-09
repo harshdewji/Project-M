@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, CheckCircle2, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
-import './Inquiry.css';
+import '../Inquiry.css';
 
 const InquiryPage = () => {
   const [formData, setFormData] = useState({
