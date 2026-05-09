@@ -1,0 +1,184 @@
+.budget-calculator {
+  background: white;
+  padding: 35px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-organic);
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1px solid var(--border-color);
+}
+
+.calc-header {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.calc-icon {
+  color: var(--accent);
+  width: 32px;
+  height: 32px;
+}
+
+.calc-header h3 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.calc-header p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.calc-section {
+  margin-bottom: 25px;
+}
+
+.calc-section label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.room-btn {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background: var(--bg-primary);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.room-btn:hover {
+  border-color: var(--accent);
+}
+
+.room-btn.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.label-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.sqft-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.sqft-slider {
+  width: 100%;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.level-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.level-card {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: var(--bg-primary);
+}
+
+.level-card:hover {
+  border-color: var(--accent);
+}
+
+.level-card.active {
+  border-color: var(--accent);
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.level-radio {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+}
+
+.level-card.active .level-radio {
+  border-color: var(--accent);
+}
+
+.level-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.level-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.level-desc {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.calc-footer {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+.estimate-box {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.estimate-label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 5px;
+}
+
+.estimate-value {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.estimate-note {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.full-width {
+  width: 100%;
+}

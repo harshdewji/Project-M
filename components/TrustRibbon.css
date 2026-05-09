@@ -1,0 +1,47 @@
+.trust-ribbon {
+  background: var(--bg-secondary);
+  padding: 30px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.trust-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+}
+
+.trust-icon {
+  color: var(--accent);
+  background: var(--bg-secondary);
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+}
+
+.trust-text h4 {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.trust-text p {
+  font-size: 0.8rem;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .trust-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

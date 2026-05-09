@@ -1,0 +1,79 @@
+.creative-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  user-select: none;
+}
+
+.toggle-label {
+  font-family: var(--font-accent);
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--text-secondary);
+  opacity: 0.5;
+  transition: var(--transition-smooth);
+}
+
+.toggle-label.left {
+  opacity: var(--theme-daylight-op, 1);
+}
+
+.toggle-label.right {
+  opacity: var(--theme-ambient-op, 0.3);
+}
+
+.lighting-dimmer {
+  width: 58px;
+  height: 30px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 30px;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.dimmer-knob {
+  width: 22px;
+  height: 22px;
+  background: var(--text-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.active-dark .dimmer-knob {
+  background: var(--accent);
+}
+
+.active-dark {
+  border-color: var(--accent);
+}
+
+/* Theme variable overrides for the labels */
+[data-theme='light'] .creative-toggle-wrapper {
+  --theme-daylight-op: 1;
+  --theme-ambient-op: 0.3;
+}
+
+[data-theme='dark'] .creative-toggle-wrapper {
+  --theme-daylight-op: 0.3;
+  --theme-ambient-op: 1;
+}
+
+.lighting-dimmer:hover {
+  border-color: var(--accent);
+}
+
+@media (max-width: 600px) {
+  .toggle-label {
+    display: none; /* Hide text on small screens for cleaner look */
+  }
+}

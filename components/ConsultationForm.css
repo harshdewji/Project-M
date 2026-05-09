@@ -1,0 +1,82 @@
+.consultation-form-container {
+  background: #fff;
+  padding: 45px;
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 440px;
+  color: var(--text-primary);
+  text-align: left;
+  box-shadow: var(--shadow-organic);
+  border: 1px solid rgba(140, 123, 108, 0.1);
+}
+
+.consultation-form-container h3 {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-family: var(--font-heading);
+}
+
+.consultation-form-container p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 35px;
+  font-weight: 300;
+}
+
+.consultation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group input, 
+.form-group select {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1.5px solid #f0f0f0;
+  border-radius: var(--radius-sm);
+  background-color: #fafafa;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  outline: none;
+  transition: var(--transition-smooth);
+}
+
+/* Handle Autofill Backgrounds */
+.form-group input:-webkit-autofill,
+.form-group input:-webkit-autofill:hover, 
+.form-group input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #fafafa inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.form-group input:focus {
+  border-color: var(--accent);
+  background-color: #fff;
+}
+
+.form-group input::placeholder {
+  color: #bbb;
+  font-weight: 300;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.form-footer {
+  font-size: 0.75rem !important;
+  text-align: center;
+  margin-top: 15px;
+  opacity: 0.7;
+}
+
+@media (max-width: 992px) {
+  .consultation-form-container {
+    margin: 30px auto 0;
+  }
+}
