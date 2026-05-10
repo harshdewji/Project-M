@@ -42,7 +42,7 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <h4 style={{ margin: 0, fontFamily: 'var(--font-heading)', fontSize: '1.2rem' }}>Direct Line</h4>
-                  <p style={{ color: 'var(--text-secondary)', margin: 0 }}>+91 98765 43210</p>
+                  <p style={{ color: 'var(--text-secondary)', margin: 0 }}>+91 6232793125</p>
                 </div>
               </div>
             </div>
