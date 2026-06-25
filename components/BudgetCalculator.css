@@ -182,3 +182,12 @@
 .full-width {
   width: 100%;
 }
+
+@media (max-width: 576px) {
+  .budget-calculator {
+    padding: 20px;
+  }
+  .room-grid {
+    grid-template-columns: 1fr;
+  }
+}

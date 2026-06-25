@@ -182,11 +182,42 @@
 }
 
 @media (max-width: 1024px) {
-  .ed-narrative-grid { gap: 60px; }
-  .ed-room-overlay { position: static; width: 100%; padding: 40px; }
-  .ed-room-overlay h2 { font-size: 2.8rem; }
-  .ed-main-visual { height: auto; }
-  .ed-metadata-column { padding-left: 0; border-left: none; flex-direction: row; flex-wrap: wrap; }
+  .ed-narrative-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .ed-room-overlay {
+    position: static;
+    width: 100%;
+    padding: 40px;
+  }
+  .ed-room-overlay h2 {
+    font-size: 2.8rem;
+  }
+  .ed-main-visual {
+    height: auto;
+  }
+  .ed-metadata-column {
+    padding-left: 0;
+    border-left: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ed-blueprint-box {
+    padding: 25px 15px;
+  }
+  
+  .ed-technical-intro h3 {
+    font-size: 2.2rem;
+  }
+  
+  .ed-section-header h3 {
+    font-size: 2.5rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -200,10 +231,15 @@
   }
 
   .ed-room-overlay {
-    padding: 30px;
+    padding: 30px 20px;
   }
 
   .ed-room-overlay h2 {
     font-size: 2.2rem;
+  }
+  
+  .ed-metadata-column {
+    flex-direction: column;
+    gap: 20px;
   }
 }

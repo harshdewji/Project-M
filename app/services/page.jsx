@@ -38,20 +38,20 @@ const ServicesPage = ({ openModal }) => {
       <div className="container">
         <h1 className="section-title">My Services</h1>
         
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '30px', marginTop: '40px' }}>
+        <div className="services-grid">
           {services.map((srv, idx) => (
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               key={idx}
-              style={{ padding: '40px 30px', backgroundColor: 'var(--bg-secondary)', borderRadius: '8px', border: '1px solid var(--border-color)', textAlign: 'center' }}
+              className="service-card"
             >
-              <div style={{ marginBottom: '20px', display: 'flex', justifyContent: 'center' }}>{srv.icon}</div>
-              <h3 style={{ marginBottom: '15px' }}>{srv.title}</h3>
-              <p style={{ color: 'var(--text-secondary)', marginBottom: '25px', minHeight: '60px' }}>{srv.desc}</p>
-              <div style={{ fontWeight: '600', color: 'var(--accent)', fontSize: '1.1rem' }}>{srv.price}</div>
-              <button className="btn-outline" style={{ marginTop: '20px', width: '100%' }} onClick={openModal}>Book Now</button>
+              <div className="service-icon-wrapper">{srv.icon}</div>
+              <h3>{srv.title}</h3>
+              <p>{srv.desc}</p>
+              <div className="service-price">{srv.price}</div>
+              <button className="btn-outline" onClick={openModal}>Book Now</button>
             </motion.div>
           ))}
         </div>
@@ -59,7 +59,7 @@ const ServicesPage = ({ openModal }) => {
         {/* Design Packages */}
         <div style={{ marginTop: '100px' }}>
           <h2 className="section-title">Design Packages</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px', marginTop: '40px' }}>
+          <div className="packages-grid">
             {[
               { 
                 name: 'Essential', 
@@ -80,22 +80,15 @@ const ServicesPage = ({ openModal }) => {
                 btnClass: 'btn-outline'
               }
             ].map((pkg, idx) => (
-              <div key={idx} style={{ 
-                padding: '50px 30px', 
-                background: pkg.name === 'Premium' ? 'white' : 'var(--bg-secondary)', 
-                borderRadius: '12px', 
-                border: pkg.name === 'Premium' ? '2px solid var(--accent)' : '1px solid var(--border-color)',
-                textAlign: 'center',
-                boxShadow: pkg.name === 'Premium' ? '0 10px 30px rgba(0,0,0,0.05)' : 'none',
-                position: 'relative',
-                transform: pkg.name === 'Premium' ? 'scale(1.05)' : 'none',
-                zIndex: pkg.name === 'Premium' ? '2' : '1'
-              }}>
-                {pkg.name === 'Premium' && <span style={{ position: 'absolute', top: '15px', right: '15px', background: 'var(--accent)', color: 'white', padding: '4px 12px', borderRadius: '20px', fontSize: '0.7rem', fontWeight: '700' }}>BEST VALUE</span>}
-                <h3 style={{ fontSize: '1.5rem', marginBottom: '10px' }}>{pkg.name}</h3>
-                <div style={{ fontSize: '2.5rem', fontWeight: '700', marginBottom: '30px', color: 'var(--text-primary)' }}>{pkg.price}</div>
-                <ul style={{ marginBottom: '40px', textAlign: 'left', padding: '0 20px' }}>
-                  {pkg.features.map((f, i) => <li key={i} style={{ marginBottom: '12px', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>• {f}</li>)}
+              <div 
+                key={idx} 
+                className={`package-card ${pkg.name === 'Premium' ? 'premium' : ''}`}
+              >
+                {pkg.name === 'Premium' && <span className="package-badge">BEST VALUE</span>}
+                <h3>{pkg.name}</h3>
+                <div className="package-price">{pkg.price}</div>
+                <ul className="package-features">
+                  {pkg.features.map((f, i) => <li key={i}>• {f}</li>)}
                 </ul>
                 <button className={pkg.btnClass} style={{ width: '100%' }} onClick={openModal}>Choose {pkg.name}</button>
               </div>

@@ -181,15 +181,35 @@
 @media (max-width: 1024px) {
   .hero-creative-inner {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
   
   .hero-visual-right {
-    height: 800px;
-    margin-top: 50px;
+    height: 450px;
+    margin-top: 30px;
   }
   
   .main-logo-text {
-    font-size: 7rem;
+    font-size: 5.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-visual-right {
+    height: 300px;
+  }
+  
+  .main-logo-text {
+    font-size: 3.5rem;
+  }
+
+  .creative-tagline {
+    letter-spacing: 0.3em;
+    gap: 10px;
+  }
+
+  .creative-tagline::after {
+    width: 40px;
   }
 }
 /* Signature Collections */
@@ -319,5 +339,34 @@
 @media (max-width: 992px) {
   .bento-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .bento-visual {
+    height: 350px;
+  }
+
+  .collections-mosaic {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-auto-rows: 280px;
+  }
+
+  .mosaic-info {
+    opacity: 1;
+    background: rgba(17, 17, 17, 0.7);
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .mosaic-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+
+  .mosaic-info p {
+    font-size: 0.65rem;
+    text-align: left;
   }
 }

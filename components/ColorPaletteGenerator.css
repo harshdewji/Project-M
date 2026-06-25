@@ -104,3 +104,19 @@
   margin-bottom: 15px;
   font-style: italic;
 }
+
+@media (max-width: 576px) {
+  .palette-generator {
+    padding: 20px;
+  }
+  .color-overlay {
+    opacity: 1;
+    background: rgba(0,0,0,0.15);
+  }
+  .color-swatch:hover {
+    flex: 1;
+  }
+  .color-overlay span {
+    font-size: 0.65rem;
+  }
+}
