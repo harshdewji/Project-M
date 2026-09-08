@@ -20,7 +20,7 @@ const PriceList = () => {
       <html lang="en">
       <head>
         <meta charset="UTF-8">
-        <title>Studio M | Standard Rate Card 2024</title>
+        <title>Studio Arka | Standard Rate Card 2024</title>
         <style>
           @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400&display=swap');
           body { font-family: 'Inter', sans-serif; background: #FDFCFB; color: #1C1C1C; padding: 50px; line-height: 1.6; }
@@ -37,7 +37,7 @@ const PriceList = () => {
       <body>
         <div class="container">
           <div class="header">
-            <h1>Studio M Rate Card</h1>
+            <h1>Studio Arka Rate Card</h1>
             <p>Architectural Interiors & Bespoke Spaces</p>
           </div>
           <table>
@@ -50,7 +50,7 @@ const PriceList = () => {
           </table>
           <div class="footer">
             * All rates are indicative. Final pricing depends on project scope.<br/>
-            &copy; 2024 Studio M Agency
+            &copy; 2024 Studio Arka Agency
           </div>
         </div>
       </body>
@@ -60,7 +60,7 @@ const PriceList = () => {
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = 'Studio_M_PriceList_2024.html';
+    link.download = 'Studio_Arka_PriceList_2024.html';
     link.click();
     URL.revokeObjectURL(url);
   };

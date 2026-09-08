@@ -43,7 +43,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <h2 className="brand-main">Studio M</h2>
+            <h2 className="brand-main">Studio Arka</h2>
             <p className="brand-sub" style={{ letterSpacing: '2px', fontSize: '0.7rem', textTransform: 'uppercase', color: 'var(--accent)', marginTop: '-10px', marginBottom: '15px' }}>Architectural Interiors</p>
             <p>Your trusted interior design partner. We bring your dream home to life with precision and style.</p>
             <div className="trust-badges-mini">
@@ -53,18 +53,22 @@ const Footer = () => {
           <div className="footer-links">
             <h3>Interior Solutions</h3>
             <ul>
-              <li><Link href="/services">Modular Kitchens</Link></li>
-              <li><Link href="/services">Wardrobes & Storage</Link></li>
-              <li><Link href="/services">Living Room Design</Link></li>
-              <li><Link href="/services">Bedroom Interiors</Link></li>
-              <li><Link href="/services">Space Saving Furniture</Link></li>
+              <li><Link href="/services/modular-kitchens">Modular Kitchens</Link></li>
+              <li><Link href="/services/wardrobes-and-storage">Wardrobes & Storage</Link></li>
+              <li><Link href="/services/living-room-design">Living Room Design</Link></li>
+              <li><Link href="/services/bedroom-interiors">Bedroom Interiors</Link></li>
+              <li><Link href="/services/space-saving-furniture">Space Saving Furniture</Link></li>
             </ul>
           </div>
           <div className="footer-contact">
             <h3>Our Studio</h3>
-            <p>Studio M, Luxury Design Center, <br />Main Commercial Hub, City Center</p>
-            <p className="mt-10" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><MailIcon /> design@muskandewangan.com</p>
-            <p style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><PhoneIcon /> +91 98765 43210</p>
+            <p>Studio Arka, Luxury Design Center, <br />Main Commercial Hub, City Center</p>
+            <p className="mt-10" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <MailIcon /> <a href="mailto:arka4@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>arka4@gmail.com</a>
+            </p>
+            <p style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <PhoneIcon /> <a href="tel:+916232793125" style={{ color: 'inherit', textDecoration: 'none' }}>+91 62327 93125</a>
+            </p>
           </div>
           <div className="footer-social">
             <h3>Stay Inspired</h3>
@@ -97,7 +101,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Studio M Interior Design. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Studio Arka Interior Design. All rights reserved.</p>
         </div>
       </div>
     </footer>

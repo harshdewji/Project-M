@@ -2,7 +2,7 @@ import "./globals.css";
 import LayoutWrapper from "@/components/LayoutWrapper";
 
 export const metadata = {
-  title: "Studio M | Architectural Interiors",
+  title: "Studio Arka | Architectural Interiors",
   description: "Bespoke interior design services for luxury homes and offices.",
 };
 

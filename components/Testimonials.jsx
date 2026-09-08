@@ -9,7 +9,7 @@ const staticTestimonials = [
   {
     id: 1,
     client_name: 'Anjali Sharma',
-    review: 'Studio M transformed our apartment into a sanctuary. Their eye for organic textures and spatial flow is unmatched.',
+    review: 'Studio Arka transformed our apartment into a sanctuary. Their eye for organic textures and spatial flow is unmatched.',
     rating: 5,
     role: 'Homeowner'
   },

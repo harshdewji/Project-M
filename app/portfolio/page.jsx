@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import '../Portfolio.css';
 
@@ -17,7 +18,7 @@ const staticProjects = [
   { id: 2, title: 'Bespoke Wardrobe System', category: 'Residential', image: wardrobeImg },
   { id: 3, title: 'Luxury Living Concept', category: 'Residential', image: livingImg },
   { id: 4, title: 'Minimalist Bedroom', category: 'Residential', image: bedroomImg },
-  { id: 5, title: 'Creative Home Office', category: 'Commercial', image: officeImg },
+  { id: 5, title: 'Commercial Spaces', category: 'Commercial', image: officeImg },
   { id: 6, title: 'Contemporary Dining', category: 'Residential', image: diningImg },
 ];
 
@@ -64,15 +65,17 @@ const PortfolioPage = () => {
                 key={project.id} 
                 className="portfolio-item"
               >
-                <div className="portfolio-img-wrapper">
-                  <img src={project.image} alt={project.title} />
-                  <div className="portfolio-overlay">
-                    <div className="overlay-content">
-                      <h3>{project.title}</h3>
-                      <p>{project.category}</p>
+                <Link href={`/portfolio/${project.id}`} style={{ display: 'block', height: '100%', textDecoration: 'none' }}>
+                  <div className="portfolio-img-wrapper" style={{ cursor: 'pointer' }}>
+                    <img src={project.image} alt={project.title} />
+                    <div className="portfolio-overlay">
+                      <div className="overlay-content">
+                        <h3>{project.title}</h3>
+                        <p>{project.category} • View Project Details →</p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </motion.div>
             ))}
           </AnimatePresence>

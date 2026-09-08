@@ -4,6 +4,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import './ProjectShowcase.css';
 
+import Link from 'next/link';
+
 // Assets
 const officeShowcase = '/assets/portfolio_luxury_office_1776973212687.png';
 const livingTechnical = '/assets/interior_technical_drawing_living_room_1777622685705.png';
@@ -23,18 +25,20 @@ const ProjectShowcase = () => {
           <span>INTERIORS</span>
         </div>
 
-        <div className="ed-main-visual">
-          <img src={officeShowcase} alt="Executive Office" className="ed-hero-img" />
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="ed-room-overlay"
-          >
-            <div className="ed-room-label">ROOM 01</div>
-            <h2>EXECUTIVE LOUNGE</h2>
-            <p>Bespoke Commercial Design</p>
-          </motion.div>
-        </div>
+        <Link href="/portfolio/5" style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}>
+          <div className="ed-main-visual" style={{ cursor: 'pointer' }}>
+            <img src={officeShowcase} alt="Executive Office" className="ed-hero-img" />
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="ed-room-overlay"
+            >
+              <div className="ed-room-label">ROOM 01</div>
+              <h2>EXECUTIVE LOUNGE</h2>
+              <p>Bespoke Commercial Design • Click to View Project →</p>
+            </motion.div>
+          </div>
+        </Link>
 
         <div className="ed-narrative container">
           <div className="ed-narrative-grid">
@@ -64,18 +68,20 @@ const ProjectShowcase = () => {
 
       {/* CHAPTER 2: THE MODERN RETREAT (ROOM 02) */}
       <section className="ed-chapter ed-dark-bg">
-        <div className="ed-main-visual">
-          <img src={bedroomShowcase} alt="Modern Bedroom" className="ed-hero-img" style={{ opacity: 0.9 }} />
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="ed-room-overlay"
-          >
-            <div className="ed-room-label">ROOM 02</div>
-            <h2>MODERN RETREAT</h2>
-            <p>High-End Residential Bedroom</p>
-          </motion.div>
-        </div>
+        <Link href="/portfolio/4" style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}>
+          <div className="ed-main-visual" style={{ cursor: 'pointer' }}>
+            <img src={bedroomShowcase} alt="Modern Bedroom" className="ed-hero-img" style={{ opacity: 0.9 }} />
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="ed-room-overlay"
+            >
+              <div className="ed-room-label">ROOM 02</div>
+              <h2>MODERN RETREAT</h2>
+              <p>High-End Residential Bedroom • Click to View Project →</p>
+            </motion.div>
+          </div>
+        </Link>
 
         {/* Technical Section */}
         <div className="ed-technical-section container">
@@ -106,24 +112,26 @@ const ProjectShowcase = () => {
         </div>
       </section>
 
-      {/* CHAPTER 3: THE WELLNESS SPA (ROOM 03) */}
+      {/* CHAPTER 3: COMMERCIAL SPACES (ROOM 03) */}
       <section className="ed-chapter">
-        <div className="ed-main-visual">
-          <img src={bathShowcase} alt="Wellness Spa" className="ed-hero-img" />
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="ed-room-overlay"
-          >
-            <div className="ed-room-label">ROOM 03</div>
-            <h2>WELLNESS SPA</h2>
-            <p>Luxury Bath Concept</p>
-          </motion.div>
-        </div>
+        <Link href="/portfolio/5" style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}>
+          <div className="ed-main-visual" style={{ cursor: 'pointer' }}>
+            <img src={officeShowcase} alt="Commercial Spaces" className="ed-hero-img" />
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="ed-room-overlay"
+            >
+              <div className="ed-room-label">ROOM 03</div>
+              <h2>COMMERCIAL SPACES</h2>
+              <p>Bespoke Office & Retail Design • Click to View Project →</p>
+            </motion.div>
+          </div>
+        </Link>
 
         <div className="editorial-footer">
           <span>PROJECT REF: MD-2024-001</span>
-          <span>STUDIO M AGENCY</span>
+          <span>STUDIO ARKA AGENCY</span>
           <div className="ed-footer-actions">
             <a href="/technical-monograph.pdf" download className="btn-outline" style={{ padding: '6px 15px', fontSize: '0.6rem' }}>
               DOWNLOAD MONOGRAPH (PDF)

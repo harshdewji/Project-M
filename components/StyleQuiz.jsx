@@ -110,7 +110,7 @@ const StyleQuiz = () => {
       <html lang="en">
       <head>
         <meta charset="UTF-8">
-        <title>${result.title} | Studio M Vibe Guide</title>
+        <title>${result.title} | Studio Arka Vibe Guide</title>
         <style>
           @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400&display=swap');
           body { font-family: 'Inter', sans-serif; background: #FDFCFB; color: #1a1a1a; padding: 50px; line-height: 1.8; }
@@ -124,7 +124,7 @@ const StyleQuiz = () => {
       </head>
       <body>
         <div class="card">
-          <span class="badge">Studio M | Monograph</span>
+          <span class="badge">Studio Arka | Monograph</span>
           <h1>${result.title}</h1>
           <p class="desc">${result.desc}</p>
           <div class="offer">

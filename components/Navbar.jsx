@@ -16,9 +16,9 @@ const Navbar = ({ openModal, scrolled }) => {
       <div className="container nav-container">
         <div className="logo creative-brand">
           <Link href="/" className="brand-logo">
-            <div className="brand-initial">M</div>
+            <div className="brand-initial">A</div>
             <div className="brand-meta">
-              <span className="brand-main">Studio M</span>
+              <span className="brand-main">Studio Arka</span>
               <span className="brand-sub">Architectural Interiors</span>
             </div>
           </Link>

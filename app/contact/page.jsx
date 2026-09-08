@@ -54,12 +54,14 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <h4 style={{ margin: 0, fontFamily: 'var(--font-heading)', fontSize: '1.2rem' }}>Email Inquiries</h4>
-                  <p style={{ color: 'var(--text-secondary)', margin: 0 }}>contact@muskandesigns.com</p>
+                  <p style={{ color: 'var(--text-secondary)', margin: 0 }}>
+                    <a href="mailto:arka4@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>arka4@gmail.com</a>
+                  </p>
                 </div>
               </div>
             </div>
 
-            <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', backgroundColor: '#25D366', border: 'none' }}>
+            <a href="https://wa.me/916232793125" target="_blank" rel="noreferrer" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', backgroundColor: '#25D366', border: 'none' }}>
               <MessageCircle size={20} /> Chat on WhatsApp
             </a>
           </div>

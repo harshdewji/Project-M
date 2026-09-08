@@ -14,8 +14,14 @@ export default function LayoutWrapper({ children }) {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
+    const handleOpenModal = () => setIsModalOpen(true);
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('open-consultation-modal', handleOpenModal);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('open-consultation-modal', handleOpenModal);
+    };
   }, []);
 
   return (

@@ -34,7 +34,7 @@ const Home = ({ openModal }) => {
     <div className="home simple-premium">
       {/* Subtle Vertical Brand Label */}
       <div className="vertical-brand-label">
-        <span>STUDIO M — ARCHITECTURAL INTERIORS</span>
+        <span>STUDIO ARKA — ARCHITECTURAL INTERIORS</span>
       </div>
 
       {/* Hero Section */}
@@ -48,7 +48,7 @@ const Home = ({ openModal }) => {
               transition={{ duration: 0.8 }}
               className="brand-signature"
             >
-              <h1 className="main-logo-text">STUDIO<span>M</span></h1>
+              <h1 className="main-logo-text">STUDIO<span>ARKA</span></h1>
               <p className="creative-tagline">Architectural Interiors</p>
             </motion.div>
             
@@ -87,44 +87,44 @@ const Home = ({ openModal }) => {
           </div>
           
           <div className="collections-mosaic">
-            <div className="mosaic-item tall">
+            <Link href="/portfolio/4" className="mosaic-item tall" style={{ textDecoration: 'none', color: 'inherit' }}>
               <img src={bedroomNew} alt="Organic Bedroom" />
               <div className="mosaic-info">
                 <h4>Master Retreats</h4>
-                <p>Organic modern sanctuaries</p>
+                <p>Organic modern sanctuaries • View Project →</p>
               </div>
-            </div>
-            <div className="mosaic-item small">
+            </Link>
+            <Link href="/portfolio/1" className="mosaic-item small" style={{ textDecoration: 'none', color: 'inherit' }}>
               <img src={kitchenImg} alt="Modern Kitchen" />
               <div className="mosaic-info">
                 <h4>Epicurean Hubs</h4>
               </div>
-            </div>
-            <div className="mosaic-item small">
+            </Link>
+            <Link href="/portfolio/6" className="mosaic-item small" style={{ textDecoration: 'none', color: 'inherit' }}>
               <img src={diningNew} alt="Dining Area" />
               <div className="mosaic-info">
                 <h4>Gathering Spaces</h4>
               </div>
-            </div>
-            <div className="mosaic-item wide">
-              <img src={officeNew} alt="Home Office" />
+            </Link>
+            <Link href="/portfolio/5" className="mosaic-item wide" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <img src={officeNew} alt="Commercial Spaces" />
               <div className="mosaic-info">
-                <h4>Creative Studios</h4>
-                <p>Where productivity meets peace</p>
+                <h4>Commercial Spaces</h4>
+                <p>Where productivity meets peace • View Project →</p>
               </div>
-            </div>
-            <div className="mosaic-item small">
-              <img src={bathroomNew} alt="Luxury Bathroom" />
+            </Link>
+            <Link href="/portfolio/5" className="mosaic-item small" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <img src={officeNew} alt="Commercial Spaces" />
               <div className="mosaic-info">
-                <h4>Wellness Spas</h4>
+                <h4>Commercial Spaces</h4>
               </div>
-            </div>
-            <div className="mosaic-item small">
+            </Link>
+            <Link href="/portfolio/2" className="mosaic-item small" style={{ textDecoration: 'none', color: 'inherit' }}>
               <img src={wardrobeImg} alt="Wardrobe" />
               <div className="mosaic-info">
                 <h4>Bespoke Closets</h4>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
