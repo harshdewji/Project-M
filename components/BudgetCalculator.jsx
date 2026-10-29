@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useMemo } from 'react';
-import { Calculator, Info, CheckCircle } from 'lucide-react';
+import { Calculator, Info, CheckCircle, Sparkles } from 'lucide-react';
 import './BudgetCalculator.css';
 
 const roomTypes = [
@@ -98,7 +98,24 @@ const BudgetCalculator = ({ openModal }) => {
           <span className="estimate-value">₹ {estimate.toLocaleString('en-IN')} - ₹ {(estimate * 1.2).toLocaleString('en-IN')}</span>
           <p className="estimate-note">*Prices are indicative for Indian markets and may vary based on actual site conditions.</p>
         </div>
-        <button className="btn-primary full-width" onClick={openModal}>Get Final Quote</button>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginTop: '12px' }}>
+          <button className="btn-primary full-width" onClick={openModal}>Get Final Quote</button>
+          <button 
+            type="button" 
+            className="btn-outline full-width" 
+            style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px', fontSize: '0.82rem', padding: '10px' }}
+            onClick={() => {
+              if (typeof window !== 'undefined') {
+                window.dispatchEvent(new CustomEvent('open-ai-assistant', {
+                  detail: { prompt: `Can you give me a detailed architectural budget breakdown and material specifications for a ${selectedLevel.name} ${selectedRoom.name} (${sqft} sq.ft)?` }
+                }));
+              }
+            }}
+          >
+            <Sparkles size={15} color="var(--accent)" />
+            <span>Ask Arka AI for Itemized Breakdown</span>
+          </button>
+        </div>
       </div>
     </div>
   );

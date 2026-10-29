@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Sparkles, MessageSquare } from 'lucide-react';
 import './Home.css';
 
 // Assets
@@ -164,6 +164,102 @@ const Home = ({ openModal }) => {
 
             <div className="bento-item bento-visual">
               <img src={afterImg} alt="3D Visualization" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Arka AI Concierge Showcase Section */}
+      <section className="section arka-ai-home-section" style={{ background: '#111111', color: '#FFFFFF', padding: '125px 0' }}>
+        <div className="container">
+          <div className="ai-home-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '60px', alignItems: 'center' }}>
+            <div>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', background: 'rgba(142, 123, 109, 0.25)', border: '1px solid rgba(142, 123, 109, 0.45)', padding: '8px 18px', borderRadius: '24px', color: '#D4AF37', fontSize: '0.8rem', letterSpacing: '2.5px', textTransform: 'uppercase', marginBottom: '24px' }}>
+                <Sparkles size={16} />
+                <span>Next-Gen Architectural Intelligence</span>
+              </div>
+              <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '3.5rem', color: '#FFFFFF', margin: '0 0 24px 0', lineHeight: '1.15' }}>
+                Design Smarter with <span style={{ color: '#8E7B6D' }}>Arka AI</span>
+              </h2>
+              <p style={{ color: '#B3AAA2', fontSize: '1.15rem', lineHeight: '1.8', marginBottom: '35px' }}>
+                Explore customized architectural styling, real-time cost estimations, and curated material palettes for your home in seconds. Tailored specifically for Indian homes, luxury villas, and executive spaces.
+              </p>
+              
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '18px', marginBottom: '40px' }}>
+                <Link href="/ai-consultant" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', textDecoration: 'none', padding: '16px 36px', fontSize: '0.85rem' }}>
+                  <Sparkles size={18} /> EXPLORE AI STUDIO
+                </Link>
+                <button 
+                  type="button"
+                  className="btn-outline" 
+                  style={{ color: '#FFFFFF', borderColor: 'rgba(255,255,255,0.35)', display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '16px 32px', fontSize: '0.85rem' }}
+                  onClick={() => {
+                    if (typeof window !== 'undefined') {
+                      window.dispatchEvent(new CustomEvent('open-ai-assistant', {
+                        detail: { prompt: "Can you help me choose the best interior design style and estimate costs for my apartment?" }
+                      }));
+                    }
+                  }}
+                >
+                  <MessageSquare size={18} /> CHAT WITH ARKA AI
+                </button>
+              </div>
+
+              {/* Quick AI Starter Chips */}
+              <div>
+                <span style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '1.2px', color: '#8E7B6D', display: 'block', marginBottom: '12px' }}>Try popular AI prompts:</span>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+                  {[
+                    "💰 Estimate 3BHK interior cost",
+                    "🍳 Modular kitchen with Blum fittings",
+                    "🎨 Japandi color palette & wood pairings",
+                    "🛏️ Minimalist master bedroom layout"
+                  ].map((chip, idx) => (
+                    <button
+                      key={idx}
+                      type="button"
+                      onClick={() => {
+                        if (typeof window !== 'undefined') {
+                          window.dispatchEvent(new CustomEvent('open-ai-assistant', { detail: { prompt: chip } }));
+                        }
+                      }}
+                      style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.15)', color: '#D4C9BF', padding: '8px 16px', borderRadius: '20px', fontSize: '0.84rem', cursor: 'pointer', transition: 'all 0.2s ease' }}
+                    >
+                      {chip}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(142, 123, 109, 0.35)', padding: '45px', borderRadius: '8px', position: 'relative' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.12)', paddingBottom: '18px', marginBottom: '30px' }}>
+                <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.45rem', color: '#FFFFFF' }}>Virtual Architectural Capabilities</span>
+                <span style={{ width: '10px', height: '10px', backgroundColor: '#10B981', borderRadius: '50%', boxShadow: '0 0 12px #10B981' }}></span>
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '26px' }}>
+                <div style={{ display: 'flex', gap: '18px', alignItems: 'flex-start' }}>
+                  <div style={{ width: '42px', height: '42px', background: '#8E7B6D', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, color: '#FFFFFF', fontSize: '1.1rem', fontWeight: 600 }}>1</div>
+                  <div>
+                    <h4 style={{ color: '#FFFFFF', fontSize: '1.2rem', margin: '0 0 6px 0', fontFamily: 'var(--font-heading)' }}>Bespoke Concept Generation</h4>
+                    <p style={{ color: '#A0968E', fontSize: '0.92rem', margin: 0, lineHeight: '1.6' }}>Select your space typology and aesthetic movement to receive an architect-grade concept brief in seconds.</p>
+                  </div>
+                </div>
+                <div style={{ display: 'flex', gap: '18px', alignItems: 'flex-start' }}>
+                  <div style={{ width: '42px', height: '42px', background: '#8E7B6D', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, color: '#FFFFFF', fontSize: '1.1rem', fontWeight: 600 }}>2</div>
+                  <div>
+                    <h4 style={{ color: '#FFFFFF', fontSize: '1.2rem', margin: '0 0 6px 0', fontFamily: 'var(--font-heading)' }}>Real-Time Investment Modeling</h4>
+                    <p style={{ color: '#A0968E', fontSize: '0.92rem', margin: 0, lineHeight: '1.6' }}>Accurate budget projections reflecting genuine materials (BWP marine ply, German Blum, Italian marble) in INR.</p>
+                  </div>
+                </div>
+                <div style={{ display: 'flex', gap: '18px', alignItems: 'flex-start' }}>
+                  <div style={{ width: '42px', height: '42px', background: '#8E7B6D', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, color: '#FFFFFF', fontSize: '1.1rem', fontWeight: 600 }}>3</div>
+                  <div>
+                    <h4 style={{ color: '#FFFFFF', fontSize: '1.2rem', margin: '0 0 6px 0', fontFamily: 'var(--font-heading)' }}>Harmonious Material & Lighting Plans</h4>
+                    <p style={{ color: '#A0968E', fontSize: '0.92rem', margin: 0, lineHeight: '1.6' }}>Cohesive 5-tone color harmonies with click-to-copy HEX codes and Kelvin temperature lighting guidance.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

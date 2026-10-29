@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import ConsultationModal from './ConsultationModal';
 import WhatsAppWidget from './WhatsAppWidget';
+import AIAssistant from './AIAssistant';
 
 export default function LayoutWrapper({ children }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -39,6 +40,7 @@ export default function LayoutWrapper({ children }) {
       <Footer />
       <ConsultationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <WhatsAppWidget />
+      <AIAssistant />
     </div>
   );
 }

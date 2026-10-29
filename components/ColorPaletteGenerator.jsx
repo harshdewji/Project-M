@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Palette, Copy, Check } from 'lucide-react';
+import { Palette, Copy, Check, Sparkles } from 'lucide-react';
 import './ColorPaletteGenerator.css';
 
 const vibes = [
@@ -82,7 +82,21 @@ const ColorPaletteGenerator = () => {
 
       <div className="palette-footer">
         <p>Tip: Use the lightest color for walls and darkest for accents.</p>
-        <button className="btn-outline full-width">Download Vibe PDF</button>
+        <button 
+          type="button" 
+          className="btn-outline full-width"
+          style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px', fontSize: '0.82rem', padding: '10px', marginTop: '10px' }}
+          onClick={() => {
+            if (typeof window !== 'undefined') {
+              window.dispatchEvent(new CustomEvent('open-ai-assistant', {
+                detail: { prompt: `How would Studio Arka apply the "${selectedVibe.name}" palette (${selectedVibe.colors.join(', ')}) to a modern apartment? Which materials (stone, wood, paint) match best?` }
+              }));
+            }
+          }}
+        >
+          <Sparkles size={15} color="var(--accent)" />
+          <span>Ask Arka AI How to Apply This Palette</span>
+        </button>
       </div>
     </div>
   );

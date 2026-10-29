@@ -186,6 +186,23 @@ const StyleQuiz = () => {
                 <Sparkles className="result-icon" />
                 <h2>Your Style is: {result.title}</h2>
                 <p>{result.desc}</p>
+                <div style={{ marginTop: '15px' }}>
+                  <button 
+                    type="button"
+                    onClick={() => {
+                      if (typeof window !== 'undefined') {
+                        window.dispatchEvent(new CustomEvent('open-ai-assistant', {
+                          detail: { prompt: `I just took the Style Quiz and my result is "${result.title}"! Can you recommend color schemes, furniture styles, and material specifications for this?` }
+                        }));
+                      }
+                    }}
+                    className="btn-outline"
+                    style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 18px', fontSize: '0.85rem' }}
+                  >
+                    <Sparkles size={16} color="var(--accent)" />
+                    <span>Consult Arka AI on this Style</span>
+                  </button>
+                </div>
               </div>
               <form onSubmit={handleSubmit} className="result-form">
                 <p>Get your detailed style guide and 15% discount code in your inbox!</p>

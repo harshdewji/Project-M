@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sparkles } from 'lucide-react';
 
 const Navbar = ({ openModal, scrolled }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,6 +29,17 @@ const Navbar = ({ openModal, scrolled }) => {
           <li><Link href="/about" className={isActive('/about') ? 'active' : ''} onClick={() => setIsOpen(false)}>About</Link></li>
           <li><Link href="/portfolio" className={isActive('/portfolio') ? 'active' : ''} onClick={() => setIsOpen(false)}>Portfolio</Link></li>
           <li><Link href="/services" className={isActive('/services') ? 'active' : ''} onClick={() => setIsOpen(false)}>Services</Link></li>
+          <li>
+            <Link 
+              href="/ai-consultant" 
+              className={`ai-nav-link ${isActive('/ai-consultant') ? 'active' : ''}`} 
+              onClick={() => setIsOpen(false)}
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}
+            >
+              <Sparkles size={14} style={{ color: 'var(--accent)' }} />
+              <span>AI Studio</span>
+            </Link>
+          </li>
           <li><Link href="/contact" className={isActive('/contact') ? 'active' : ''} onClick={() => setIsOpen(false)}>Contact</Link></li>
           <li className={`nav-accent ${isActive('/start-project') ? 'active' : ''}`}>
             <Link href="/start-project" onClick={() => setIsOpen(false)}>Start Project</Link>
